@@ -95,7 +95,7 @@ header nav ul li:hover .description {
 }
 
 #hero {
-    background: url('./public/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
+    background: url('/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;

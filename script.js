@@ -1,9 +1,9 @@
 const galleryImages = [
-    "./public/img/ferrari-sf90-dinamismo-lateral-653298.jpg",
-    "./public/img/ferrari-sf90-vista-delantera-653296.jpg",
-    "./public/img/ferrari-sf90-vista-lateral-653299.jpg",
-    "./public/img/interior-ferrari-sf90-vista-lateral-asientos-653295.jpg",
-    "./public/img/volante-cabina-sf90-653294.jpg"
+    "/img/ferrari-sf90-dinamismo-lateral-653298.jpg",
+    "/img/ferrari-sf90-vista-delantera-653296.jpg",
+    "/img/ferrari-sf90-vista-lateral-653299.jpg",
+    "/img/interior-ferrari-sf90-vista-lateral-asientos-653295.jpg",
+    "/img/volante-cabina-sf90-653294.jpg"
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
