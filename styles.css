@@ -297,3 +297,15 @@ header nav ul li:hover .description {
     background: #fff;
     color: #444;
 }
+
+/* Scroll-triggered fade-in effect */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 0.8s ease-out;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

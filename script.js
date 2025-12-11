@@ -42,4 +42,19 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollToTopButton.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Intersection Observer for fade-in effect
+    const revealSections = document.querySelectorAll('.reveal-on-scroll');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    revealSections.forEach(section => {
+        revealObserver.observe(section);
+    });
 });
