@@ -95,7 +95,7 @@ header nav ul li:hover .description {
 }
 
 #hero {
-    background: url('/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
+    background: url('./public/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -103,6 +103,7 @@ header nav ul li:hover .description {
     text-align: center;
     color: #fff;
     position: relative;
+    background-attachment: fixed;
 }
 
 .hero-content {
@@ -139,30 +140,35 @@ header nav ul li:hover .description {
     }
 }
 
-#history, #gallery, #specs {
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+#history {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco para contraste */
+    text-align: justify;
+    padding: 2rem;
+    border-radius: 8px;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./public/img/interior-ferrari-sf90-vista-lateral-asientos-653295.jpg') no-repeat center center/cover; /* Fondo con imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    max-width: 900px;
+    border-left: 5px solid #FF4500; /* Borde lateral para destacar */
 }
 
-#history {
-    font-size: 0.9rem; /* Reducido el tamaño del texto para ocupar menos espacio */
-    line-height: 1.4; /* Ajustado el interlineado para mantener legibilidad */
-    text-align: justify;
-    border-left: 4px solid #444;
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+#history h2 {
+    text-align: center;
+    color: #FF4500; /* Título destacado */
+    margin-bottom: 1rem;
 }
 
 #history p {
     margin-bottom: 1.5rem;
 }
 
-#history:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.7);
+#gallery, #specs {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 #gallery .gallery {
@@ -184,17 +190,23 @@ header nav ul li:hover .description {
 }
 
 #specs {
-    background-color: #111;
-    color: #e0e0e0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #fff; /* Texto blanco para contraste */
+    text-align: justify;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    text-align: left;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./public/img/ferrari-sf90-vista-delantera-653296.jpg') no-repeat center center/cover; /* Fondo con imagen */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 2rem auto;
+    max-width: 900px;
+    border-left: 5px solid #007BFF; /* Borde lateral para destacar */
 }
 
 #specs h2 {
     text-align: center;
-    color: #bbb;
-    margin-bottom: 1.5rem;
+    color: #007BFF; /* Título destacado */
+    margin-bottom: 1rem;
 }
 
 #specs ul {
@@ -203,7 +215,7 @@ header nav ul li:hover .description {
 }
 
 #specs ul li {
-    background: #1a1a1a;
+    background: rgba(0, 0, 0, 0.8);
     margin: 0.5rem 0;
     padding: 1rem;
     border-left: 4px solid #444;
