@@ -164,7 +164,7 @@ header nav ul li:hover .description {
     margin-bottom: 1.5rem;
 }
 
-#gallery, #specs {
+#gallery {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -189,44 +189,68 @@ header nav ul li:hover .description {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para resaltar la imagen */
 }
 
+/* === New Styles for Specs Section === */
 #specs {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #fff; /* Texto blanco para contraste */
-    text-align: justify;
-    padding: 2rem;
-    border-radius: 8px;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./public/img/ferrari-sf90-vista-delantera-653296.jpg') no-repeat center center/cover; /* Fondo con imagen */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 4rem 2rem;
+    max-width: 1200px;
     margin: 2rem auto;
-    max-width: 900px;
-    border-left: 5px solid #007BFF; /* Borde lateral para destacar */
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('./public/img/ferrari-sf90-vista-delantera-653296.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
 #specs h2 {
-    text-align: center;
-    color: #007BFF; /* Título destacado */
+    color: #fff; /* White title for better contrast */
+    border-bottom: 2px solid #FF4500;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+    margin-bottom: 3rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.spec-card {
+    background: rgba(30, 30, 30, 0.7);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+}
+
+.spec-card:hover {
+    transform: translateY(-10px);
+    background: rgba(40, 40, 40, 0.9);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.spec-icon {
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    line-height: 1;
+    color: #FF4500;
 }
 
-#specs ul {
-    list-style: none;
-    padding: 0;
+.spec-card h3 {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-#specs ul li {
-    background: rgba(0, 0, 0, 0.8);
-    margin: 0.5rem 0;
-    padding: 1rem;
-    border-left: 4px solid #444;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#specs ul li:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+.spec-card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
 }
 
 /* Diseño Responsivo */
