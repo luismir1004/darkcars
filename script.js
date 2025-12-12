@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const products = [
-        { id: 1, name: 'Ferrari SF90', price: 1200000, image: './public/img/ferrari-sf90-vista-delantera-653296.jpg' },
-        { id: 2, name: 'Ferrari 488', price: 950000, image: './public/img/daniel-garcia-eU0J-cMaW7M-unsplash.jpg' },
-        { id: 3, name: 'Ferrari F8', price: 1100000, image: './public/img/ferrari-sf90-vista-lateral-653299.jpg' },
+        { id: 1, name: 'Ferrari SF90', price: 1200000, image: './public/img/ferrari-sf90-vista-delantera-653296.jpg', engine: 'V8 Híbrido Enchufable', power: '1000 CV', description: 'El SF90 Stradale es el primer superdeportivo híbrido de producción en serie de Ferrari.' },
+        { id: 2, name: 'Ferrari 488', price: 950000, image: './public/img/joshua-koblin-eqW1MPinEV4-unsplash.jpg', engine: 'V8 Bi-Turbo', power: '670 CV', description: 'Sucesor del 458 Italia, el 488 GTB marcó el regreso de los motores turbo a los modelos de motor central de la marca.' },
+        { id: 3, name: 'Ferrari F8', price: 1100000, image: './public/img/2020-Ferrari-F8-Tributo-007-1600.jpg', engine: 'V8 Bi-Turbo', power: '720 CV', description: 'El F8 Tributo es un homenaje al motor V8 de Ferrari, considerado uno de los mejores del mundo.' },
     ];
 
     const productList = document.querySelector('.product-list');

@@ -3,16 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const registerForm = document.getElementById('register-form');
 
-    // Logic to switch between login and register forms
+    // Lógica para cambiar entre los formularios de login y registro
     formSelector.addEventListener('click', (e) => {
         if (e.target.classList.contains('selector-btn')) {
             const formToActivate = e.target.dataset.form;
 
-            // Update button active state
+            // Actualizar el estado activo del botón
             formSelector.querySelectorAll('.selector-btn').forEach(btn => btn.classList.remove('active'));
             e.target.classList.add('active');
 
-            // Update form visibility
+            // Actualizar la visibilidad del formulario
             if (formToActivate === 'login') {
                 loginForm.classList.add('active');
                 registerForm.classList.remove('active');
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Simulated Backend Interaction ---
+    // --- Interacción Simulada con el Backend ---
 
-    // Handle Registration Form Submission
+    // Manejar el envío del formulario de registro
     registerForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const username = document.getElementById('register-username').value;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('register-password').value;
         const messageEl = registerForm.querySelector('.form-message');
 
-        // Basic validation
+        // Validación básica
         if (!username || !email || !password) {
             showMessage(messageEl, 'Por favor, rellena todos los campos.', 'error');
             return;
@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showMessage(messageEl, 'Registrando...', 'loading');
 
-        // ** SIMULATED API CALL **
-        // In a real application, you would send this data to your backend:
+        // ** LLAMADA SIMULADA A LA API **
+        // En una aplicación real, enviarías estos datos a tu backend:
         // fetch('/api/register', {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json' },
@@ -52,19 +52,19 @@ document.addEventListener('DOMContentLoaded', () => {
         // .then(data => { ... });
 
         setTimeout(() => {
-            // Simulate a successful registration
+            // Simular un registro exitoso
             showMessage(messageEl, '¡Registro completado! Ahora puedes iniciar sesión.', 'success');
             registerForm.reset();
             
-            // Switch to the login form after a short delay
+            // Cambiar al formulario de login después de un breve retraso
             setTimeout(() => {
                  formSelector.querySelector('[data-form="login"]').click();
             }, 1500);
 
-        }, 2000); // Simulate network delay
+        }, 2000); // Simular retraso de red
     });
 
-    // Handle Login Form Submission
+    // Manejar el envío del formulario de login
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault();
         const email = document.getElementById('login-email').value;
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         showMessage(messageEl, 'Iniciando sesión...', 'loading');
 
-        // ** SIMULATED API CALL **
-        // In a real application, you would send this data to your backend:
+        // ** LLAMADA SIMULADA A LA API **
+        // En una aplicación real, enviarías estos datos a tu backend:
         // fetch('/api/login', {
         //     method: 'POST',
         //     headers: { 'Content-Type': 'application/json' },
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // .then(response => response.json())
         // .then(data => { 
         //     if (data.success) {
-        //          // Store token/session and redirect
+        //          // Guardar token/sesión y redirigir
         //          localStorage.setItem('authToken', data.token);
         //          window.location.href = '/';
         //     } else {
@@ -97,23 +97,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // });
         
         setTimeout(() => {
-            // Simulate a successful login
+            // Simular un login exitoso
             if (email === "test@test.com" && password === "password") {
                  showMessage(messageEl, '¡Sesión iniciada correctamente! Redirigiendo...', 'success');
-                 // In a real app, you would redirect to the main page
+                 // En una aplicación real, redirigirías a la página principal
                  setTimeout(() => {
-                    window.location.href = '/'; // Redirect to the main page
+                    window.location.href = '/'; // Redirigir a la página principal
                  }, 1500);
             } else {
-                // Simulate incorrect credentials
+                // Simular credenciales incorrectas
                 showMessage(messageEl, 'Email o contraseña incorrectos.', 'error');
             }
-        }, 2000); // Simulate network delay
+        }, 2000); // Simular retraso de red
     });
 
     function showMessage(element, text, type) {
         element.textContent = text;
-        element.className = 'form-message'; // Reset classes
+        element.className = 'form-message'; // Resetear clases
         if (type === 'success') {
             element.classList.add('success');
         } else if (type === 'error') {
