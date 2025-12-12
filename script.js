@@ -1,9 +1,7 @@
 const galleryImages = [
-    { src: "./public/img/ferrari-sf90-dinamismo-lateral-653298.jpg", alt: "Ferrari SF90 en movimiento lateral" },
     { src: "./public/img/ferrari-sf90-vista-delantera-653296.jpg", alt: "Vista delantera del Ferrari SF90" },
     { src: "./public/img/ferrari-sf90-vista-lateral-653299.jpg", alt: "Vista lateral del Ferrari SF90" },
-    { src: "./public/img/interior-ferrari-sf90-vista-lateral-asientos-653295.jpg", alt: "Interior y asientos del Ferrari SF90" },
-    { src: "./public/img/volante-cabina-sf90-653294.jpg", alt: "Volante y cabina del Ferrari SF90" }
+    { src: "./public/img/interior-ferrari-sf90-vista-lateral-asientos-653295.jpg", alt: "Interior y asientos del Ferrari SF90" }
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
