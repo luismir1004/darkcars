@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             productCard.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
-                <p>${product.price.toLocaleString()}</p>
+                <p>${product.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
                 <button class="add-to-cart-btn" data-id="${product.id}">Añadir al Carrito</button>
             `;
             productList.appendChild(productCard);
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <img src="${item.image}" alt="${item.name}">
                 <div class="modal-item-info">
                     <h4>${item.name}</h4>
-                    <p>${item.price.toLocaleString()}</p>
+                    <p>${item.price.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
                 </div>
                 <button class="remove-from-cart-btn" data-index="${index}">Eliminar</button>
             `;
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateTotalPrice() {
         const totalPrice = cart.reduce((total, item) => total + item.price, 0);
-        modalTotalPriceElement.textContent = `${totalPrice.toLocaleString()}`;
+        modalTotalPriceElement.textContent = `${totalPrice.toLocaleString('en-US', { style: 'currency', currency: 'USD' })}`;
     }
 
     function addToCart(productId) {

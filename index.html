@@ -21,7 +21,7 @@
                 <li><a href="login.html#login">Inicia Sesión</a></li>
                 <li><a href="login.html#register">Registrate</a></li>
                 <li><a href="#products">Productos</a></li>
-                <li><a href="#" id="cart-icon">🛒</a></li>
+                <li><a href="#" id="cart-icon" aria-label="Carrito de Compras">🛒</a></li>
             </ul>
         </nav>
     </header>
@@ -44,8 +44,12 @@
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Super Autos. Todos los derechos reservados.</p>
+        <p>&copy; <span id="current-year"></span> Super Autos. Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
 
     <!-- Carrito Modal -->
     <div id="cart-modal-overlay" class="hidden">

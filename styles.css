@@ -1,14 +1,5 @@
 
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: var(--color-background);
-    color: var(--color-text);
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
 header {
     background-color: rgba(var(--color-background-rgb), 0.8); /* Fondo transparente pero oscuro */
     position: fixed;
