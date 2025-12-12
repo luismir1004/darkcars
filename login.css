@@ -1,0 +1,117 @@
+.login-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 80px; /* Space for the fixed header */
+    background-color: #000;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(25, 25, 25, 0.8);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-selector {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 2rem;
+}
+
+.selector-btn {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #888;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 3px solid transparent;
+}
+
+.selector-btn.active {
+    color: #fff;
+    border-bottom: 3px solid #FF4500;
+}
+
+.auth-form {
+    display: none;
+}
+
+.auth-form.active {
+    display: block;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    color: #bbb;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 0.8rem;
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #FF4500;
+    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #FF4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.submit-btn:hover {
+    background: #E03E00;
+}
+
+.form-message {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.form-message.success {
+    color: #28a745;
+}
+
+.form-message.error {
+    color: #dc3545;
+}

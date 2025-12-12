@@ -15,88 +15,53 @@
 <body>
     <header>
         <nav>
-            <div class="logo">Super Autos Deportivos</div>
+            <div class="logo">Super Autos</div>
             <ul>
-                <li><a href="#history">Historia</a></li>
-                <li><a href="#gallery">Galería</a></li>
-                <li><a href="#specs">Especificaciones</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#products">Productos</a></li>
+                <li><a href="#" id="cart-icon">🛒</a></li>
             </ul>
         </nav>
     </header>
     <section id="hero">
         <div class="hero-content">
-            <h1>Ferrari SF90s</h1>
-            <p>Innovación y potencia en su máxima expresión.</p>
+            <h1>Super Autos</h1>
+            <p>Tu concesionario de super deportivos de confianza.</p>
         </div>
     </section>
     <main>
-        <section id="history" class="reveal-on-scroll">
-            <h2>Historia</h2>
-            <p>El Ferrari SF90 representa un avance revolucionario en la historia de los superdeportivos. Lanzado en 2019, este modelo híbrido enchufable marcó un antes y un después al combinar la herencia de Ferrari con la innovación tecnológica más avanzada. Su nombre, "SF90", celebra los 90 años de la Scuderia Ferrari, un legado de excelencia en el automovilismo.</p>
-            <p>Con un motor V8 turboalimentado de 4.0 litros y tres motores eléctricos, el SF90 alcanza una potencia combinada de 1000 caballos de fuerza. Este impresionante rendimiento lo posiciona como uno de los vehículos más potentes jamás fabricados por Ferrari, capaz de acelerar de 0 a 100 km/h en tan solo 2.5 segundos.</p>
-            <p>El diseño aerodinámico del SF90 no solo es visualmente impactante, sino que también optimiza el flujo de aire para maximizar la estabilidad y el rendimiento. Además, su sistema de tracción en las cuatro ruedas y el modo de conducción totalmente eléctrico destacan su versatilidad y compromiso con la sostenibilidad.</p>
-            <p>El Ferrari SF90 no es solo un vehículo; es una declaración de intenciones. Representa la perfecta armonía entre tradición e innovación, llevando la experiencia de conducción a un nivel completamente nuevo y estableciendo un estándar para el futuro de los superdeportivos.</p>
-        </section>
-        <section id="gallery" class="reveal-on-scroll">
-            <h2>Galería</h2>
-            <div class="gallery">
-                <!-- Las imágenes se generarán dinámicamente aquí -->
+        <section id="products">
+            <h2>Nuestros Deportivos</h2>
+            <div class="carousel-container">
+                <div class="product-list">
+                    <!-- Los productos se generarán dinámicamente aquí -->
+                </div>
+                <button class="carousel-btn prev-btn">‹</button>
+                <button class="carousel-btn next-btn">›</button>
             </div>
-        </section>
-        <section id="specs" class="reveal-on-scroll">
-            <h2>Especificaciones Clave</h2>
-            <ul class="specs-list">
-                <li class="spec-item">
-                    <div class="spec-header">
-                        <span class="spec-icon">⚙️</span>
-                        <h3>Motor y Potencia</h3>
-                    </div>
-                    <div class="spec-content">
-                        <p><strong>Motor Principal:</strong> V8 biturbo de 4.0 litros. <strong>Potencia del motor de combustión:</strong> 780 CV. <strong>Motores eléctricos:</strong> Tres motores que suman 220 CV. <strong>Potencia total combinada:</strong> 1,000 CV, ofreciendo una aceleración y respuesta sin precedentes.</p>
-                    </div>
-                </li>
-                <li class="spec-item">
-                    <div class="spec-header">
-                        <span class="spec-icon">🚀</span>
-                        <h3>Rendimiento</h3>
-                    </div>
-                    <div class="spec-content">
-                        <p><strong>Aceleración (0-100 km/h):</strong> 2.5 segundos. <strong>Aceleración (0-200 km/h):</strong> 6.7 segundos. <strong>Velocidad máxima:</strong> 340 km/h. Estas cifras definen al SF90 como uno de los vehículos de producción más rápidos del mundo.</p>
-                    </div>
-                </li>
-                <li class="spec-item">
-                    <div class="spec-header">
-                        <span class="spec-icon">🔋</span>
-                        <h3>Sistema Híbrido y Autonomía</h3>
-                    </div>
-                    <div class="spec-content">
-                        <p><strong>Batería:</strong> Iones de litio de 7.9 kWh. <strong>Autonomía en modo eléctrico (eDrive):</strong> 25 km, permitiendo una conducción silenciosa y sin emisiones en entornos urbanos. <strong>Modos de conducción:</strong> eDrive, Hybrid, Performance y Qualify.</p>
-                    </div>
-                </li>
-                <li class="spec-item">
-                    <div class="spec-header">
-                        <span class="spec-icon">🌐</span>
-                        <h3>Transmisión y Tracción</h3>
-                    </div>
-                    <div class="spec-content">
-                        <p><strong>Caja de cambios:</strong> F1 de doble embrague con 8 velocidades, optimizada para cambios ultra-rápidos. <strong>Tracción:</strong> Sistema de tracción total (AWD) con vectorización de par, garantizando máximo agarre y agilidad en cualquier condición.</p>
-                    </div>
-                </li>
-                 <li class="spec-item">
-                    <div class="spec-header">
-                        <span class="spec-icon">⚖️</span>
-                        <h3>Chasis y Aerodinámica</h3>
-                    </div>
-                    <div class="spec-content">
-                        <p><strong>Peso en seco:</strong> 1,570 kg, gracias a un chasis de fibra de carbono y aluminio. <strong>Aerodinámica:</strong> Sistema de aerodinámica activa patentado, incluyendo el 'shut-off Gurney', que ajusta la carga aerodinámica para optimizar la estabilidad a altas velocidades.</p>
-                    </div>
-                </li>
-            </ul>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Super Autos Deportivos. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Super Autos. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Carrito Modal -->
+    <div id="cart-modal-overlay" class="hidden">
+        <div id="cart-modal">
+            <div class="modal-header">
+                <h2>Carrito de Compras</h2>
+                <button id="close-modal-btn">&times;</button>
+            </div>
+            <div id="cart-modal-body">
+                <!-- Items del carrito irán aquí -->
+            </div>
+            <div class="modal-footer">
+                <p>Total: <span id="modal-total-price">$0.00</span></p>
+                <button id="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
