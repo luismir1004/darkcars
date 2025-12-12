@@ -1,14 +1,21 @@
 :root {
-    /* Paleta de Colores */
-    --color-primary: #FF4500; /* Naranja Ferrari */
-    --color-primary-dark: #E03E00;
-    --color-text: #fff;
-    --color-text-muted: #bbb;
-    --color-background: #000;
-    --color-surface-1: #111;
-    --color-surface-2: #1a1a1a;
-    --color-surface-3: #2a2a2a;
-    --color-border: rgba(255, 255, 255, 0.1);
+    /* Paleta de Colores - Tema Oscuro (Desarrollador Web) */
+    --color-primary: #e50914; /* Rojo Ferrari */
+    --color-primary-rgb: 229, 9, 20; /* RGB para uso en rgba() */
+    --color-primary-dark: #b2070e; /* Rojo más oscuro para hover */
+    --color-text: #e8e8e8; /* Texto blanco brillante pero no puro */
+    --color-text-muted: #b8b8b8; /* Texto ligeramente menos prominente */
+    --color-background: #0d0d0d; /* Gris muy oscuro, casi negro, para el fondo principal */
+    --color-background-rgb: 13, 13, 13; /* RGB para uso en rgba() */
+    --color-surface-1: #1a1a1a; /* Superficie base para cards y secciones */
+    --color-surface-1-rgb: 26, 26, 26; /* RGB para uso en rgba() */
+    --color-surface-2: #242424; /* Ligeramente más claro que surface-1 */
+    --color-surface-3: #2d2d2d; /* Para elementos dentro de superficies */
+    --color-border: rgba(255, 255, 255, 0.15); /* Borde sutil pero visible */
+    --color-border-dark: rgba(255, 255, 255, 0.25); /* Borde un poco más visible */
+
+    --color-success: #28a745; /* Color para mensajes de éxito */
+    --color-error: #dc3545; /* Color para mensajes de error */
 
     /* Tipografía */
     --font-primary: 'Arial', sans-serif;

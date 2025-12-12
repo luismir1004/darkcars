@@ -1,9 +1,0 @@
-{
-  "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/:path((?!api/|.*\\.).*)",
-      "destination": "/:path.html"
-    }
-  ]
-}

@@ -4,23 +4,23 @@
     align-items: center;
     min-height: 100vh;
     padding-top: 80px; /* Space for the fixed header */
-    background-color: #000;
+    background: linear-gradient(rgba(var(--color-background-rgb), 0.6), rgba(var(--color-background-rgb), 0.8)), url('./public/img/ferrari-sf90-vista-lateral-653299.jpg') no-repeat center center/cover;
 }
 
 .login-container {
     width: 100%;
     max-width: 450px;
-    background: rgba(25, 25, 25, 0.8);
+    background: rgba(var(--color-surface-1-rgb), 0.9); /* Aumentar opacidad para un look más oscuro */
     padding: 2.5rem;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--color-surface-1); /* Borde más oscuro */
     backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 30px rgba(var(--color-background-rgb), 0.5);
 }
 
 .form-selector {
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid var(--color-surface-1); /* Borde más oscuro */
     margin-bottom: 2rem;
 }
 
@@ -28,7 +28,7 @@
     flex: 1;
     background: none;
     border: none;
-    color: #888;
+    color: var(--color-surface-3); /* Color más oscuro para el texto inactivo */
     padding: 1rem;
     font-size: 1.1rem;
     font-weight: bold;
@@ -38,8 +38,8 @@
 }
 
 .selector-btn.active {
-    color: #fff;
-    border-bottom: 3px solid #FF4500;
+    color: var(--color-text);
+    border-bottom: 3px solid var(--color-primary);
 }
 
 .auth-form {
@@ -53,7 +53,7 @@
 .auth-form h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: #fff;
+    color: var(--color-text);
 }
 
 .input-group {
@@ -63,7 +63,7 @@
 
 .input-group label {
     display: block;
-    color: #bbb;
+    color: var(--color-text-muted);
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
 }
@@ -71,25 +71,25 @@
 .input-group input {
     width: 100%;
     padding: 0.8rem;
-    background: #111;
-    border: 1px solid #444;
+    background: var(--color-surface-1);
+    border: 1px solid var(--color-surface-1); /* Usar surface-1 para el borde, o un color más claro si se desea un contraste */
     border-radius: 5px;
-    color: #fff;
+    color: var(--color-text);
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .input-group input:focus {
     outline: none;
-    border-color: #FF4500;
-    box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 10px rgba(var(--color-primary-rgb), 0.3);
 }
 
 .submit-btn {
     width: 100%;
     padding: 1rem;
-    background: #FF4500;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-text);
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
@@ -99,7 +99,7 @@
 }
 
 .submit-btn:hover {
-    background: #E03E00;
+    background: var(--color-primary-dark);
 }
 
 .form-message {
@@ -109,9 +109,9 @@
 }
 
 .form-message.success {
-    color: #28a745;
+    color: var(--color-success);
 }
 
 .form-message.error {
-    color: #dc3545;
+    color: var(--color-error);
 }
