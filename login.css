@@ -4,7 +4,7 @@
     align-items: center;
     min-height: 100vh;
     padding-top: 80px; /* Space for the fixed header */
-    background: linear-gradient(rgba(var(--color-background-rgb), 0.6), rgba(var(--color-background-rgb), 0.8)), url('./public/img/ferrari-sf90-vista-lateral-653299.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(var(--color-background-rgb), 0.6), rgba(var(--color-background-rgb), 0.8)), url('/img/ferrari-sf90-vista-lateral-653299.jpg') no-repeat center center/cover;
 }
 
 .login-container {

@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // Import styles
 import '../base.css';
 import '../styles.css';
-import '../login.css';
 
 // Import page components
 import HomePage from './pages/HomePage';

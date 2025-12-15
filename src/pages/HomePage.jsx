@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Header from '../components/Header';
 
 const productsData = [
     { id: 1, name: 'Ferrari SF90', price: 1200000, image: '/img/ferrari-sf90-vista-delantera-653296.jpg', engine: 'V8 Híbrido Enchufable', power: '1000 CV', description: 'El SF90 Stradale es el primer superdeportivo híbrido de producción en serie de Ferrari.' },
@@ -35,37 +35,10 @@ function HomePage() {
 
     const total = cart.reduce((acc, item) => acc + item.price, 0);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        };
-
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, []);
-
 
     return (
         <>
-            <header>
-                <nav>
-                    <div className="logo"><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Super Autos</Link></div>
-                    <ul>
-                        <li><Link to="/login">Inicia Sesión</Link></li>
-                        <li><Link to="/login">Registrate</Link></li>
-                        <li><a href="#products">Productos</a></li>
-                        <li><a href="#" id="cart-icon" aria-label="Carrito de Compras" onClick={() => setIsModalOpen(true)}>🛒</a></li>
-                    </ul>
-                </nav>
-            </header>
+            <Header showCartButton={true} onCartClick={() => setIsModalOpen(true)} />
             <section id="hero">
                 <div className="hero-content">
                     <h1>Super Autos</h1>

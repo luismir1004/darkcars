@@ -37,17 +37,17 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: var(--color-text-muted);
+    color: var(--color-text);
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: normal;
+    font-size: 1rem;
     padding: 0.5rem 1rem;
     display: inline-block;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: var(--color-text);
+    color: var(--color-primary);
 }
 
 header nav ul li a::after {
@@ -57,8 +57,8 @@ header nav ul li a::after {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--color-text);
-    transition: width 0.3s ease;
+    background: var(--color-primary);
+    transition: width 0.2s ease;
 }
 
 header nav ul li a:hover::after {
@@ -88,7 +88,7 @@ header nav ul li:hover .description {
 }
 
 #hero {
-    background: linear-gradient(rgba(var(--color-background-rgb), 0.6), rgba(var(--color-background-rgb), 0.8)), url('./public/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(var(--color-background-rgb), 0.6), rgba(var(--color-background-rgb), 0.8)), url('/img/ferrari-sf90-dinamismo-lateral-653298.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
