@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import '../../login.css';
 
+const Loader = () => (
+    <div className="loader-wrapper">
+        <div className="loader"></div>
+    </div>
+);
+
 function LoginPage() {
     const [activeForm, setActiveForm] = useState('login'); // 'login' or 'register'
+    const [isLoading, setIsLoading] = useState(true);
 
     // State for Login form
     const [loginEmail, setLoginEmail] = useState('');
@@ -13,6 +20,20 @@ function LoginPage() {
     const [registerUsername, setRegisterUsername] = useState('');
     const [registerEmail, setRegisterEmail] = useState('');
     const [registerPassword, setRegisterPassword] = useState('');
+
+    useEffect(() => {
+        const handleLoad = () => setIsLoading(false);
+
+        // Check if the document is already complete
+        if (document.readyState === 'complete') {
+            handleLoad();
+        } else {
+            // Otherwise, wait for the load event
+            window.addEventListener('load', handleLoad);
+            // And clean up the event listener
+            return () => window.removeEventListener('load', handleLoad);
+        }
+    }, []);
 
     const handleSelectorClick = (form) => {
         setActiveForm(form);
@@ -32,6 +53,7 @@ function LoginPage() {
 
     return (
         <>
+            {isLoading && <Loader />}
             <Header showCartButton={false} />
             <main className="login-main">
                 <div className="login-container">
