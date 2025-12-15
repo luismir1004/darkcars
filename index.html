@@ -4,70 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Super Autos Deportivos</title>
-    <link rel="stylesheet" href="base.css">
-    <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Descubre el Ferrari SF90, un superdeportivo híbrido enchufable que combina innovación, potencia y diseño icónico. Explora su historia, galería y especificaciones.">
     <meta name="keywords" content="Ferrari SF90, superdeportivo, híbrido enchufable, galería, especificaciones">
     <meta property="og:title" content="Ferrari SF90">
     <meta property="og:description" content="Descubre el Ferrari SF90, un superdeportivo híbrido enchufable que combina innovación, potencia y diseño icónico.">
-    <meta property="og:image" content="public/img/daniel-garcia-eU0J-cMaW7M-unsplash.jpg">
+    <meta property="og:image" content="/img/daniel-garcia-eU0J-cMaW7M-unsplash.jpg">
     <meta property="og:url" content="https://example.com">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo"><a href="/" style="text-decoration: none; color: inherit;">Super Autos</a></div>
-            <ul>
-                <li><a href="login.html#login">Inicia Sesión</a></li>
-                <li><a href="login.html#register">Registrate</a></li>
-                <li><a href="#products">Productos</a></li>
-                <li><a href="#" id="cart-icon" aria-label="Carrito de Compras">🛒</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Super Autos</h1>
-            <p>Tu concesionario de super deportivos de confianza.</p>
-        </div>
-    </section>
-    <main>
-        <section id="products">
-            <h2>Nuestros Deportivos</h2>
-            <div class="carousel-container">
-                <div class="product-list">
-                    <!-- Los productos se generarán dinámicamente aquí -->
-                </div>
-                <button class="carousel-btn prev-btn">‹</button>
-                <button class="carousel-btn next-btn">›</button>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; <span id="current-year"></span> Super Autos. Todos los derechos reservados.</p>
-    </footer>
-
-    <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-
-    <!-- Carrito Modal -->
-    <div id="cart-modal-overlay" class="hidden">
-        <div id="cart-modal">
-            <div class="modal-header">
-                <h2>Carrito de Compras</h2>
-                <button id="close-modal-btn">&times;</button>
-            </div>
-            <div id="cart-modal-body">
-                <!-- Items del carrito irán aquí -->
-            </div>
-            <div class="modal-footer">
-                <p>Total: <span id="modal-total-price">$0.00</span></p>
-                <button id="checkout-btn">Finalizar Compra</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>
